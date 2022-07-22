@@ -6,7 +6,7 @@ import { Logger } from '@nestjs/common';
 const PORT = 80;
 const options: MicroserviceOptions = {
   transport: Transport.TCP,
-  options: { host: 'localhost', port: PORT },
+  options: { port: parseInt(process.env.PORT, 10) || PORT },
 };
 const logger = new Logger();
 
