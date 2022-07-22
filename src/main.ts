@@ -7,7 +7,7 @@ const PORT = parseInt(process.env.PORT, 10);
 const options: MicroserviceOptions = {
   transport: Transport.TCP,
   options: {
-    host: 'https://fpaiement-production.up.railway.app',
+    host: 'localhost',
     port: PORT,
   },
 };
