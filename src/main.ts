@@ -3,10 +3,13 @@ import { AppModule } from './app.module';
 import { Transport, MicroserviceOptions } from '@nestjs/microservices';
 import { Logger } from '@nestjs/common';
 
-const PORT = parseInt(process.env.PORT, 10) || 80;
+const PORT = parseInt(process.env.PORT, 10);
 const options: MicroserviceOptions = {
   transport: Transport.TCP,
-  options: { port: PORT },
+  options: {
+    host: 'https://fpaiement-production.up.railway.app',
+    port: PORT,
+  },
 };
 const logger = new Logger();
 
